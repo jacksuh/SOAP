@@ -1,11 +1,23 @@
 package br.com.caelum.estoque.modelo.item;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement
 public class Item {
-
+    @XmlElement(required=true)
 	private String codigo;
+    
+    @XmlElement(required=true)
 	private String nome;
+    
+    @XmlElement(required=true)
 	private String tipo;
+    
+    @XmlElement(required=true)
 	private int quantidade;
 
 	Item() {
@@ -25,7 +37,7 @@ public class Item {
 	}
 
 	public String getCodigo() {
-		return codigo;
+		return this.codigo;
 	}
 
 	public void setCodigo(String codigo) {
@@ -33,7 +45,7 @@ public class Item {
 	}
 
 	public String getNome() {
-		return nome;
+		return this.nome;
 	}
 
 	public void setNome(String nome) {
@@ -41,7 +53,7 @@ public class Item {
 	}
 
 	public String getTipo() {
-		return tipo;
+		return this.tipo;
 	}
 
 	public void setTipo(String tipo) {
@@ -49,7 +61,7 @@ public class Item {
 	}
 	
 	public int getQuantidade() {
-		return quantidade;
+		return this.quantidade;
 	}
 
 	public void setQuantidade(int quantidade) {
